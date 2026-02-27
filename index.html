@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hope Woo | Strategic Communications Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:600">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  /* --- CUSTOM STYLES MATCHING PDF PORTFOLIO PALETTE --- */
+  body {
+    font-family: "Montserrat", sans-serif;
+    color: #4A4238; /* Warm dark brown/grey for text */
+    background-color: #FDFBF7; /* Very soft warm white */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    color: #3A332C; /* Deeper warm charcoal for headings */
+  }
+  
+  /* Custom Navbar */
+  .w3-bar.w3-custom {
+    background-color: #FFFFFF !important;
+    color: #4A4238 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .w3-bar-item:hover {
+    background-color: #C1A073 !important; /* Muted Gold/Sand from PDF */
+    color: #FFFFFF !important;
+  }
+
+  /* Hero Section */
+  .hero-header {
+    /* Warm brown overlay instead of blue/slate */
+    background-image: linear-gradient(rgba(58, 51, 44, 0.65), rgba(58, 51, 44, 0.65)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .hero-header h1 {
+    color: white;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+  .gold-accent {
+    color: #C1A073 !important; /* Signature Portfolio Beige/Gold */
+  }
+  
+  /* Custom Light Background for alternate sections */
+  .bg-warm-light {
+    background-color: #F5F2EB; /* Matches the beige background on your resume page */
+  }
+
+  /* Section Padding Override */
+  .section-padding {
+    padding: 100px 16px;
+  }
+
+  /* --- HARMONIOUS EARTH-TONE SKILL TAGS --- */
+  .skill-tag {
+    display: inline-block;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: 2px solid transparent;
+  }
+  .skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  /* Earthy, cohesive colors for skills */
+  .skill-1 { background-color: #A88C67; } /* Deep sand */
+  .skill-2 { background-color: #8A7968; } /* Warm taupe */
+  .skill-3 { background-color: #C1A073; } /* Signature gold */
+  .skill-4 { background-color: #9C8472; } /* Muted mocha */
+  .skill-5 { background-color: #D4B895; color: #4A4238; } /* Light tan (dark text) */
+  .skill-6 { background-color: #736357; } /* Dark espresso */
+  .skill-7 { background-color: #B39B82; } /* Soft clay */
+
+  /* Portfolio Cards */
+  .portfolio-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: 0.3s;
+    height: 100%;
+    border: 1px solid #EAE0D5; /* Very subtle warm border */
+  }
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(193, 160, 115, 0.2); /* Soft gold shadow */
+  }
+  .portfolio-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Timeline/Experience styling */
+  .exp-box {
+    border-left: 3px solid #C1A073;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Personal Image Styling for About Section */
+  .about-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #3A332C; /* Rich dark brown */
+    color: #FDFBF7;
+  }
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-custom w3-card" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide">WOO Wanhei, Hope</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#experience" class="w3-bar-item w3-button">EXPERIENCE</a>
+      <a href="#portfolio" class="w3-bar-item w3-button">PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+  </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+  <a href="#experience" class="w3-bar-item w3-button" onclick="toggleFunction()">EXPERIENCE</a>
+  <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+  <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+</div>
+
+<header class="hero-header" id="home">
+  <h1 class="w3-animate-top"><b><span class="gold-accent">WOO</span> Wanhei, Hope</b></h1>
+  <p class="w3-large w3-animate-bottom">Strategic Communications | Content & Brand Storytelling | Event Management</p>
+  <div class="w3-margin-top w3-animate-opacity">
+    <a href="#about" class="w3-button w3-border w3-border-white w3-hover-white w3-round-large w3-padding-large">Discover My Work</a>
+  </div>
+</header>
+
+<div class="w3-content w3-container section-padding" id="about">
+  <h2 class="w3-center w3-margin-bottom"><b>ABOUT ME</b></h2>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-col m5 w3-padding-large w3-center">
+      <img src="image.jpg" alt="Hope Woo" class="about-image">
+    </div>
+    
+    <div class="w3-col m7 w3-padding-large">
+      <p>Hi, my name is Wan Hei / Hope. With over 8 years of experience in strategic branding, multi-channel marketing, and event management, I specialize in enhancing engagement and visibility for both educational institutions and commercial brands.</p>
+      <p>At the heart of my work is storytelling. Writing is my strongest tool for communication, supported by observation, patience, and empathy. I am currently pursuing a Master's in AI and Digital Media at Hong Kong Baptist University, combining analytical thinking with creativity to deliver impactful results.</p>
+      
+      <h4 class="gold-accent w3-padding-16"><b>Core Skills</b></h4>
+      <div class="w3-margin-top">
+        <span class="skill-tag skill-1">Digital Strategy</span>
+        <span class="skill-tag skill-2">Event Management</span>
+        <span class="skill-tag skill-3">SEO Copywriting</span>
+        <span class="skill-tag skill-4">Social Media Campaigns</span>
+        <span class="skill-tag skill-5">B2B/B2C Marketing</span>
+        <span class="skill-tag skill-6">Vendor Liaison</span>
+        <span class="skill-tag skill-7">Visual Storytelling</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-warm-light" id="experience">
+  <div class="w3-content w3-container section-padding">
+    <h2 class="w3-center w3-margin-bottom"><b>PROFESSIONAL EXPERIENCE</b></h2>
+    
+    <div class="w3-row-padding">
+      <div class="w3-col m6">
+        <div class="exp-box">
+          <h4 class="gold-accent"><b>Marketing Officer</b></h4>
+          <h5><i>The Chinese University of Hong Kong (CUHK)</i></h5>
+          <p class="w3-opacity">Nov 2023 - Aug 2025</p>
+          <p>Served as the primary liaison for departmental publicity. Led integrated marketing campaigns, oversaw website revamps, and executed key public events like Info Days and the Japanese Cultural Festival.</p>
+        </div>
+        <div class="exp-box">
+          <h4 class="gold-accent"><b>Marketing Manager</b></h4>
+          <h5><i>Yumama Works Limited</i></h5>
+          <p class="w3-opacity">Sep 2021 - Apr 2023</p>
+          <p>Established brand identity and overall marketing strategy for postpartum care products. Led the marketing team on event management, seasonal promotions, and data-driven social media content.</p>
+        </div>
+      </div>
+      
+      <div class="w3-col m6">
+        <div class="exp-box">
+          <h4 class="gold-accent"><b>Project Executive</b></h4>
+          <h5><i>DanceSport Association of Hong Kong, China</i></h5>
+          <p class="w3-opacity">Jul 2023 - Nov 2023</p>
+          <p>Executed multi-channel promotional campaigns across social media, print, and TV for Olympic-qualifying dance competitions. Planned press conferences and media briefings.</p>
+        </div>
+        <div class="exp-box">
+          <h4 class="gold-accent"><b>E-Commerce Buyer / APM</b></h4>
+          <h5><i>Searching C & Novobens Limited</i></h5>
+          <p class="w3-opacity">May 2017 - Sep 2021</p>
+          <p>Sourced and onboarded 50+ international innovative lifestyle brands. Built brand strategies from scratch, managed B2B reward platforms, and produced high-converting video and ad creatives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-content w3-container section-padding" id="portfolio">
+  <h2 class="w3-center w3-margin-bottom"><b>FEATURED PROJECTS</b></h2>
+  <p class="w3-center w3-margin-bottom w3-opacity">A glimpse into my campaigns, events, and content creation.</p>
+
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="portfolio-card w3-padding">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" alt="Event Management" class="portfolio-img w3-round">
+        <div class="w3-container w3-padding-16">
+          <h4 class="gold-accent"><b>Event Management</b></h4>
+          <p>From university Info Days and academic conferences at CUHK to large-scale Olympic-qualifying dance competitions. Managed logistics, PR, and stakeholder communication.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="portfolio-card w3-padding">
+        <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop" alt="Digital Campaigns" class="portfolio-img w3-round">
+        <div class="w3-container w3-padding-16">
+          <h4 class="gold-accent"><b>Digital & SEO Campaigns</b></h4>
+          <p>Developed brand identities from scratch for B2C markets. Managed website revamps, optimized SEO copy, and executed high-conversion social media ad campaigns.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="portfolio-card w3-padding">
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop" alt="Content Production" class="portfolio-img w3-round">
+        <div class="w3-container w3-padding-16">
+          <h4 class="gold-accent"><b>Content Production</b></h4>
+          <p>Bilingual copywriting, layout design, and video editing for Instagram Reels and YouTube. Crafted compelling visual storytelling that resonates with targeted audiences.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-warm-light" id="contact">
+  <div class="w3-content w3-container section-padding">
+    <h2 class="w3-center w3-margin-bottom"><b>LET'S CONNECT</b></h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m4 w3-container w3-center">
+        <i class="fa fa-envelope gold-accent w3-jumbo w3-margin-bottom"></i>
+        <p>wanheiwoo@gmail.com</p>
+      </div>
+      <div class="w3-col m4 w3-container w3-center">
+        <i class="fa fa-phone gold-accent w3-jumbo w3-margin-bottom"></i>
+        <p>+852 6448 5953</p>
+      </div>
+      <div class="w3-col m4 w3-container w3-center">
+        <a href="https://www.linkedin.com/in/hopewoowanhei/" target="_blank" style="text-decoration: none;">
+          <i class="fa fa-linkedin-square gold-accent w3-jumbo w3-margin-bottom w3-hover-opacity"></i>
+          <p>LinkedIn Profile</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-center w3-padding-32">
+  <a href="#home" class="w3-button w3-light-grey w3-round w3-text-dark-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p class="w3-margin-top">&copy; 2026 Hope WH Woo. Created for AIDM7350.</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
